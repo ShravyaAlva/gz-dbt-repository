@@ -1,23 +1,16 @@
 version: 2
 
 sources:
-  - name: raw
-    database: extreme-mix-475102-h5
-    schema: "{{target.schema}}"
-    loader: bigquery
-    description: "raw bigquery sources for sales,product, and shipping data"
-
+  - name: gz_raw_data
+    description: raw bigquery sources for sales,product, and shipping data
     tables:
-      - name: sales
-        identifier: raw_gz_sales
-        description: "Raw Sales data"
-      - name: product
-        identifier: raw_gz_product
-        description: "Raw product data"
+      - name: raw_gz_sales
+        description: Raw Sales data
+      - name: raw_gz_product
+        description: Raw product data
        
-      - name: ship
-        identifier: raw_gz_ship
-        description: "Raw shipping data"
+      - name: raw_gz_ship
+        description: Raw shipping data
         
   
 

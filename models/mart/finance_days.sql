@@ -1,3 +1,4 @@
+{{ config(materialized=table)}}
 with orders_per_days AS(
     SELECT
     date_date
@@ -25,6 +26,6 @@ SELECT
     ,log_cost
     ,ship_cost
     ,quantity
-    ROUND(revenue/NULLIF(nb_transactions,0),2) As average_basket
+    ,ROUND(revenue/NULLIF(nb_transactions,0),2) As average_basket
 FROM orders_per_days
 ORDER BY date_date DESC

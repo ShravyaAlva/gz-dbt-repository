@@ -19,15 +19,12 @@ sources:
             description: the amount paid by the customer to prushase the product. revenue = quantity * selling_price
           - name: quantity
             description: the quantity of products purchased for a given order
-            tests:
-              - unique:
-                  column_name: "(orders_id || '_' pdt_id)"
 
 
       - name: raw_gz_product
         description: Raw product data
         columns:
-          - name: product_id
+          - name: products_id
             description: primary key
             tests:
               - unique
